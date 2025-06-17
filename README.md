@@ -40,3 +40,18 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Environment Configuration
+1. Create your local .env file
+This project includes a dev.env file with placeholder keys. To run the app, you need to:
+
+cp dev.env .env
+
+Then open .env and fill in your actual values:
+CLIENT_ID=your-actual-app-id
+CLIENT_SECRET=your-actual-app-secret
+TENANT_ID=your-tenant-id
+SQL_SERVER=your-sql-server-name.database.windows.net
+SQL_DATABASE=your-database-name
+
+⚠️ Do not commit .env to Git. This file is ignored via .gitignore for security reasons.
